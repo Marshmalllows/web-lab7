@@ -77,7 +77,6 @@ async function CloseClick(){
         .catch(error => console.error('Error loading objects:', error));
     for (let i = 0; i < recordsFromServer.length; i++) {
         recordsFromLocal.push(localStorage.getItem((i + 1).toString()));
-        localStorage.removeItem((i + 1).toString());
     }
     localStorage.clear();
 
